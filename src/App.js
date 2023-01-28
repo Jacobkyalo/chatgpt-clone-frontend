@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Home } from "./components/Home";
+import { FetchProvider } from "./contexts/AppContext";
+import { AppContent } from "./styles/styled/App.styled";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FetchProvider>
+      <AppContent>
+        <Home />
+      </AppContent>
+    </FetchProvider>
   );
 }
 
 export default App;
+// import { useState } from "react";
+
+// function App() {
+//   const [input, setInput] = useState("");
+//   const [result, setResult] = useState("");
+
+//   const fetchResponse = async (event) => {
+//     event.preventDefault();
+//     if (!input) return;
+//     const response = await fetch("https://jeans-pangolin.cyclic.app/", {
+//       method: "POST",
+//       headers: {
+//         Accept: "application/json",
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({ prompt: input }),
+//     });
+//     const data = await response.json();
+//     setResult(data);
+//     setInput("");
+//   };
+
+//   // useEffect(() => {
+//   //   fetchResponse();
+//   // }, []);
+//   return (
+//     <div className="App">
+//       <form onSubmit={fetchResponse}>
+//         <input
+//           type="text"
+//           name="prompt"
+//           value={input}
+//           onChange={(e) => setInput(e.target.value)}
+//         />
+//         <input type="submit" value="Get Response" />
+//         <div className="result">
+//           <p> {result}</p>
+//         </div>
+//       </form>
+//     </div>
+//   );
+// }
+
+// export default App;
