@@ -8,5 +8,5 @@ export const Container = styled.div`
 
 export const AppContent = styled.div`
   position: relative;
-  height: 100vh;
+  height: 80vh;
 `;
