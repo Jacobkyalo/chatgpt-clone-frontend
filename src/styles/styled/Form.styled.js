@@ -8,7 +8,7 @@ export const FormWrapper = styled.div`
 `;
 
 export const Content = styled.div`
-  padding 30px 5px;
+  padding 30px 5px 0 5px;
   
 `;
 
@@ -17,6 +17,8 @@ export const FormContent = styled.form`
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-color: #111;
+  padding: 40px 5px;
 `;
 
 export const Input = styled.input`
@@ -28,4 +30,13 @@ export const Input = styled.input`
   width: 100%;
   border-radius: 5px;
   font-size: 17px;
+`;
+
+export const Button = styled.button`
+  background-color: green;
+  color: #fff;
+  padding: 20px 25px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
 `;

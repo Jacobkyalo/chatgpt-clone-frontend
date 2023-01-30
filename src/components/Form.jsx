@@ -6,6 +6,7 @@ import {
   FormContent,
   Input,
   Content,
+  Button,
 } from "../styles/styled/Form.styled";
 
 export const Form = () => {
@@ -21,6 +22,7 @@ export const Form = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />
+            <Button type="submit">Go</Button>
           </FormContent>
         </Container>
       </Content>
